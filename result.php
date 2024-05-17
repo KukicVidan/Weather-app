@@ -40,7 +40,7 @@ session_unset(); // Clear session data after use
             echo "<p>Wind Speed: {$windSpeed} m/s 💨</p>";
             echo "<br><br>";
             echo "<a class='btn' href='index.php'>⬅️Back</a>";
-            echo "<a class='btn' href='https://www.google.com/search?q=weather+in+ <?php echo $city; ?>' target='_blank' title='🗓️Weather for this week.'>More info ➡️</a>";
+            echo "<a class='btn' href='https://www.google.com/search?q=weather+in+  $city ' target='_blank' title='🗓️Weather for this week.'>More info ➡️</a>";
                 
         } else {
             echo "<p>No data available.</p>";
