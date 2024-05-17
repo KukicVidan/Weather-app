@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Weather app</title>
+  <link rel="stylesheet" href="index.css">
+  
 </head>
 <body>
-  <h1>Weather app</h1>
-  <div>
-    <h2>Search for the city</h2>
+  
+  <div class="main-div">
+    <h1>Search for the city 🌍</h1>
     <form method="POST" action="weather.php">
-      <input name="city" type="text"><br>
-      <input name="submit" type="submit" value="Check Weather!">
+      <input class="city-input" name="city" type="text"><br>
+      <input class="btn" name="submit" type="submit" value="⛅Check Weather">
     </form>
   </div>
   
