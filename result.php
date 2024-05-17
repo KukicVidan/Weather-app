@@ -23,6 +23,7 @@ session_unset(); // Clear session data after use
         <?php
         if ($error) {
             echo "<p>{$error}</p>";
+            echo " <a class='btn' href='index.php'>⬅️Back</a> ";
         } elseif ($weatherData) {
             $city = $weatherData['name'];
             $temperature = $weatherData['main']['temp'];
@@ -32,17 +33,22 @@ session_unset(); // Clear session data after use
             $icon = $weatherData['weather'][0]['icon'];
             $iconToDisplay = "http://openweathermap.org/img/wn/$icon.png";
 
-            echo "<h2>Weather in {$city}</h2>";
-            echo "<p>🌡️Temperature: {$temperature}°C</p>";
-            echo "<p>💧Humidity: {$humidity}%</p>";
-            echo "<p><img src='{$iconToDisplay}' alt='Weather Image'>Condition: {$description}  </p>";
-            echo "<p>💨Wind Speed: {$windSpeed} m/s</p>";
-            
+            echo "<h1>Weather in <a href='https://en.wikipedia.org/wiki/{$city}' target='_blank' title='Learn more about city💭'>{$city}</a></h1>";
+            echo "<p>Temperature: {$temperature}°C 🌡️</p>";
+            echo "<p>Humidity: {$humidity}% 💧</p>";
+            echo "<p>Condition: {$description}  <img src='{$iconToDisplay}' alt='Weather Image'></p>";
+            echo "<p>Wind Speed: {$windSpeed} m/s 💨</p>";
+            echo "<br><br>";
+            echo "<a class='btn' href='index.php'>⬅️Back</a>";
+            echo "<a class='btn' href='https://www.google.com/search?q=weather+in+ <?php echo $city; ?>' target='_blank' title='🗓️Weather for this week.'>More info ➡️</a>";
+                
         } else {
             echo "<p>No data available.</p>";
+            echo "<br><br>";
+            echo " <a class='btn' href='index.php'>⬅️Back</a> ";
         }
         ?>
-        <a href="index.php">Back to Search</a>
+        
     </div>
 </body>
 </html>

@@ -15,7 +15,7 @@
   <div class="main-div">
     <h1>Search for the city 🌍</h1>
     <form method="POST" action="weather.php">
-    <input class="city-input" name="city" type="text" placeholder="City name"><br>
+    <input class="city-input" name="city" type="text" placeholder="City name" required><br>
     <input class="btn" name="submit" type="submit" value="⛅Check Weather">
     </form>
   </div>
