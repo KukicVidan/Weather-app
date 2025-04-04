@@ -4,6 +4,7 @@ session_start(); // Start the session to store data
 $city = $_POST['city'];
 
 function getWeatherData($city){
+    //this is free api so it is left here! 
     $apiKey = "56cb44bfcd0f325fb8ba7a3ba55e397d";
     $apiURL = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$apiKey&units=metric";
 
